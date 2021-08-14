@@ -1,6 +1,15 @@
 type ArityOneFn = (arg: any) => any;
-type PickLastInTuple<T extends any[]> = T extends [...rest: infer U, argn: infer L] ? L : never;
-type FirstFnParameterType<T extends any[]> = Parameters<PickLastInTuple<T>>[any];
+type PickLastInTuple<T extends any[]> = T extends [
+	...rest: infer U,
+	argn: infer L
+]
+	? L
+	: never;
+type FirstFnParameterType<T extends any[], F = PickLastInTuple<T>> = F extends (
+	...args: any[]
+) => any
+	? Parameters<F>[any]
+	: never;
 type LastFnReturnType<T extends any[]> = ReturnType<T[0]>;
 
 export const compose = <T extends ArityOneFn[]>(...fns: T) => (p: FirstFnParameterType<T>): LastFnReturnType<T> => fns.reduceRight((acc: any, cur: any) => cur(acc), p);
