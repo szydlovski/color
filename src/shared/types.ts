@@ -83,3 +83,5 @@ export type DeltaE2000Weights = [LuminanceWeight: number, ChromaWeight: number, 
 
 export type ColorDeltas = [number, number, number]
 export type ColorMutation = [ColorSpace, ...ColorDeltas];
+
+export type ColorComponentString<S extends ColorSpace> = `${S}_${Exclude<keyof ColorSpaceType<S>, symbol>}`;
