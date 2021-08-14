@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc"
   },
+  "repository": "https://github.com/szydlovski/color",
   "keywords": ["color"],
   "author": {
     "name": "Kamil Szydlowski",
