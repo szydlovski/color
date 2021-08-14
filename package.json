@@ -1,0 +1,16 @@
+{
+  "name": "@szydlovski/color",
+  "version": "0.1.0",
+  "description": "simple but exhaustive, well typed, immutable color library. Handles parsing, converting, comparing and modifying colors",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["color"],
+  "author": {
+    "name": "Kamil Szydlowski",
+    "email": "kamil.szydlovski@gmail.com",
+    "url": "https://szydlovski.com"
+  },
+  "license": "MIT"
+}
