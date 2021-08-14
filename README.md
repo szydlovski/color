@@ -2,6 +2,10 @@ Simple but exhaustive, well typed, immutable color library. Handles parsing, con
 
 # Usage
 
+```
+npm install @szydlovski/color
+```
+
 ```js
 import { Color } from `@szydlovski/color`;
 
@@ -70,7 +74,7 @@ Color.from([195, 195, 195]) // components array, as rgb by default
 Color.from([195, 195, 195, 0.1]) // components array with alpha, as rgb by default
 
 Color.from([195, 195, 195], 'rgb') // components array, with explicit color space
-Color.from([195, 195, 195, 0.1], 'rgb') // components array, with alpha with explicit color space
+Color.from([195, 195, 195, 0.1], 'rgb') // components array, with alpha, with explicit color space
 
 Color.from(195, 195, 195) // individual components, as rgb by default
 Color.from(195, 195, 195, 0.1) // individual components with alpha, as rgb by default
